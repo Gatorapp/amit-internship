@@ -70,72 +70,66 @@ const HotCollections = () => {
             </div>
             <div className="https://nft-marketplacee.web.app/">
               <Slider {...settings}>
-                {loading 
-                ? 
-                new Array(4).fill(0).map((r, index) => (
-              <div className="nft_coll ">
-                      <div className="nft_wrap" key={Skeleton}>
+                {loading
+                  ? new Array(4).fill(0).map((r, index) => (
+                      <div className="nft_coll ">
+                        <div className="nft_wrap" key={Skeleton}>
                           <img
                             src={r.nftImage}
                             className="lazy img-fluid"
                             alt=""
                           />
-                      </div>
-                      <div className="nft_coll_pp">
-                        
+                        </div>
+                        <div className="nft_coll_pp">
                           <img
                             className="lazy pp-coll"
                             src={r.authorImage}
                             alt=""
                           />
-                        
-                        <i className="fa fa-check"></i>
-                      </div>
-                      <div className="nft_coll_info">
-                        <span></span>
-                      </div>
-                    </div>
 
-                ))
-                :
-                records.map((r, index) => (
-                  <div className="" key={index}>
-                    <div className="nft_coll ">
-                      <div className="nft_wrap">
-                        <Link to="/item-details">
-                          <img
-                            src={r.nftImage}
-                            className="lazy img-fluid"
-                            alt=""
-                          />
-                        </Link>
+                          <i className="fa fa-check"></i>
+                        </div>
+                        <div className="nft_coll_info">
+                          <span></span>
+                        </div>
                       </div>
-                      <div className="nft_coll_pp">
-                        <Link to="/author/">
-                          <img
-                            className="lazy pp-coll"
-                            src={r.authorImage}
-                            alt=""
-                          />
-                        </Link>
-                        <i className="fa fa-check"></i>
+                    ))
+                  : records.map((r, index) => (
+                      <div className="" key={index}>
+                        <div className="nft_coll ">
+                          <div className="nft_wrap">
+                            <Link to="/item-details">
+                              <img
+                                src={r.nftImage}
+                                className="lazy img-fluid"
+                                alt=""
+                              />
+                            </Link>
+                          </div>
+                          <div className="nft_coll_pp">
+                            <Link to="/author/">
+                              <img
+                                className="lazy pp-coll"
+                                src={r.authorImage}
+                                alt=""
+                              />
+                            </Link>
+                            <i className="fa fa-check"></i>
+                          </div>
+                          <div className="nft_coll_info">
+                            <Link to="/explore">
+                              <h4>{r.title}</h4>
+                            </Link>
+                            <span>ERC-{r.code}</span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="nft_coll_info">
-                        <Link to="/explore">
-                          <h4>{r.title}</h4>
-                        </Link>
-                        <span>ERC-{r.code}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              
+                    ))}
               </Slider>
             </div>
           </div>
         </div>
       </section>
-            
     </>
   );
 };
