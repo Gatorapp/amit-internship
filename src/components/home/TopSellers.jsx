@@ -54,8 +54,7 @@ const TopSellers = () => {
                 </li>
               ))}
             </ol>
-          </div>
-            :
+          </div>  :
             <div className="col-md-12">   
             <ol className="author_list">
               {sellers.map((s, index) => (
