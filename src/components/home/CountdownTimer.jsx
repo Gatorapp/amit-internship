@@ -24,7 +24,7 @@ const CountdownTimer = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [targetDate]);
+  }, []);
 
   return (
     <div>
