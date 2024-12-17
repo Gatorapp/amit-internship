@@ -43,7 +43,7 @@ const ExploreItems = () => {
 
   function filterProfile(event) {
     setFilter(event.target.value)
-  }
+  };
 
 
   return (
