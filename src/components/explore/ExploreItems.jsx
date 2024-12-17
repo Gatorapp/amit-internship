@@ -11,6 +11,7 @@ const ExploreItems = () => {
   const [explore, setExplore] = useState([]);
   const [loading, setLoading] = useState([true]);
   const [visible, setVisible] = useState(8);
+  const [filter, setFilter] = useState([]);
 
   const showMoreProfile = () => {
     setVisible((prevValue) => prevValue + 4)
@@ -30,7 +31,7 @@ const ExploreItems = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  if (filter === "price_low_to_high") {
+  if ( filter === "price_low_to_high") {
     explore.sort((a,b) => a.price - b.price)
   }
   else if (filter === "price_high_to_low"){
@@ -41,7 +42,7 @@ const ExploreItems = () => {
   }
 
   function filterProfile(event) {
-    console.log(event.target.value)
+    setFilter(event.target.value)
   }
 
 
