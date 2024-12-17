@@ -71,7 +71,7 @@ const HotCollections = () => {
             <div className="https://nft-marketplacee.web.app/">
               <Slider {...settings}>
                 {loading
-                  ? new Array(4).fill(0).map((r, index) => (
+                  ? new Array(4).fill(0).map((r, Skeleton) => (
                       <div className="nft_coll ">
                         <div className="nft_wrap" key={Skeleton}>
                           <img

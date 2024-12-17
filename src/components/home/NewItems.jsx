@@ -72,7 +72,7 @@ const NewItems = () => {
           </div>
           <Slider {...settings}>
             {loading
-              ? new Array(4).fill(0).map((i, index) => (
+              ? new Array(4).fill(0).map((i, Skeleton) => (
                   <div className="" key={Skeleton}>
                     <div className="nft__item">
                       <div className="author_list_pp">
