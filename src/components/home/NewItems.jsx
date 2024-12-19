@@ -72,7 +72,7 @@ const NewItems = () => {
           </div>
           <Slider {...settings}>
             {loading
-              ? new Array(4).fill(0).map((i, Skeleton) => (
+              ? new Array(4).fill(0).map((i, index) => (
                   <div className="" key={Skeleton}>
                     <div className="nft__item">
                       <div className="author_list_pp">
@@ -133,7 +133,7 @@ const NewItems = () => {
                     <div className="nft__item">
                       <div className="author_list_pp">
                         <Link
-                          to="/author/"
+                          to= {`/author/${i.authorId}`}
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Creator: Monica Lucas"
