@@ -25,7 +25,7 @@ const ExploreItems = () => {
       .then((res) => {
         setExplore(res.data);
         setLoading(false);
-        console.log(res.data)
+        // console.log(res.data)
       })
 
       .catch((err) => console.log(err));

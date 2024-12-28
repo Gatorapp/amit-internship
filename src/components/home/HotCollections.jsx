@@ -19,7 +19,7 @@ const HotCollections = () => {
       .then((res) => {
         setRecords(res.data);
         setLoading(false);
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch((err) => console.log(err));
   }, []);
