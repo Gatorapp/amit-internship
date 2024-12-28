@@ -19,9 +19,11 @@ const HotCollections = () => {
       .then((res) => {
         setRecords(res.data);
         setLoading(false);
+        // console.log(res.data)
       })
       .catch((err) => console.log(err));
   }, []);
+  
 
   var settings = {
     dots: false,
@@ -107,7 +109,7 @@ const HotCollections = () => {
                             </Link>
                           </div>
                           <div className="nft_coll_pp">
-                            <Link to="/author/">
+                            <Link to= {`/author/${r.authorId}`}>
                               <img
                                 className="lazy pp-coll"
                                 src={r.authorImage}
