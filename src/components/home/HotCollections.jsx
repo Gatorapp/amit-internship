@@ -119,6 +119,7 @@ const HotCollections = () => {
                                 src={r.authorImage}
                                 alt=""
                               />
+                              
                             </Link>
                             <i className="fa fa-check"></i>
                           </div>
