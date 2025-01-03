@@ -16,7 +16,9 @@ const TopSellers = () => {
       )
       .then((res) => {
         setSellers(res.data);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
         // console.log(res.data)
       })
 

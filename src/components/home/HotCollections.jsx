@@ -18,11 +18,15 @@ const HotCollections = () => {
       )
       .then((res) => {
         setRecords(res.data);
-        setLoading(false);
-        // console.log(res.data)
+        // console.log(res.data);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       })
       .catch((err) => console.log(err));
   }, []);
+
+
   
 
   var settings = {
@@ -73,7 +77,7 @@ const HotCollections = () => {
             <div className="https://nft-marketplacee.web.app/">
               <Slider {...settings}>
                 {loading
-                  ? new Array(4).fill(0).map((r, index) => (
+                  ? new Array(4).fill(0).map((r, Skeleton) => (
                       <div className="nft_coll ">
                         <div className="nft_wrap" key={Skeleton}>
                           <img
@@ -100,7 +104,7 @@ const HotCollections = () => {
                       <div className="" key={index}>
                         <div className="nft_coll ">
                           <div className="nft_wrap">
-                            <Link to="/item-details">
+                            <Link to={`/item-details/${r.nftId}`}>
                               <img
                                 src={r.nftImage}
                                 className="lazy img-fluid"
