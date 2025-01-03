@@ -18,7 +18,9 @@ const NewItems = () => {
       )
       .then((res) => {
         setItems(res.data);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
         // console.log(res.data);
       })
 
@@ -72,7 +74,7 @@ const NewItems = () => {
           </div>
           <Slider {...settings}>
             {loading
-              ? new Array(4).fill(0).map((i, index) => (
+              ? new Array(4).fill(0).map((i, Skeleton) => (
                   <div className="" key={Skeleton}>
                     <div className="nft__item">
                       <div className="author_list_pp">
@@ -165,7 +167,7 @@ const NewItems = () => {
                           </div>
                         </div>
 
-                        <Link to="/item-details">
+                        <Link to={`/item-details/${i.nftId}`}>
                           <img
                             src={i.nftImage}
                             className="lazy nft__item_preview"

@@ -19,10 +19,9 @@ const Author = (user) => {
         );
         setAuthor(res.data);
         setLoading(false);
-        console.log(res.data);
+        // console.log(res.data);
       } catch (error) {
         console.error("Error fetching author detail:", error);
-        setLoading(false);
       }
     };
     fetchAuthor();
@@ -103,10 +102,9 @@ const Author = (user) => {
                         </div>
                       </div>
                     </div>
-
-                    <FollowUnfollowButton 
-                    initialFollowing={false} 
-                    followers={author.followers}                    
+                    <FollowUnfollowButton
+                      initialFollowing={false}
+                      followers={author.followers}
                     />
                   </div>
                 </div>
