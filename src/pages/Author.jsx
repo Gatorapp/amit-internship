@@ -19,7 +19,6 @@ const Author = (user) => {
         );
         setAuthor(res.data);
         setLoading(false);
-        // console.log(res.data);
       } catch (error) {
         console.error("Error fetching author detail:", error);
       }

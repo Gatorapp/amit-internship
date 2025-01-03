@@ -19,7 +19,6 @@ const TopSellers = () => {
         setTimeout(() => {
           setLoading(false);
         }, 2000);
-        // console.log(res.data)
       })
 
       .catch((err) => console.log(err));

@@ -18,7 +18,6 @@ const HotCollections = () => {
       )
       .then((res) => {
         setRecords(res.data);
-        // console.log(res.data);
         setTimeout(() => {
           setLoading(false);
         }, 2000);
