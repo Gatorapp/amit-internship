@@ -18,7 +18,6 @@ const HotCollections = () => {
       )
       .then((res) => {
         setRecords(res.data);
-        // console.log(res.data);
         setTimeout(() => {
           setLoading(false);
         }, 2000);
@@ -119,6 +118,7 @@ const HotCollections = () => {
                                 src={r.authorImage}
                                 alt=""
                               />
+                              
                             </Link>
                             <i className="fa fa-check"></i>
                           </div>
